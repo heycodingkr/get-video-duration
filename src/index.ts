@@ -12,8 +12,8 @@ function getFFprobeWrappedExecution (input: string | Stream): execa.ExecaChildPr
 
   if (isStream(input)) {
     return execa(ffprobe.path, [...params, '-i', 'pipe:0'], {
-      reject: false,
-      input
+      reject: false, 
+      input 
     })
   }
 
